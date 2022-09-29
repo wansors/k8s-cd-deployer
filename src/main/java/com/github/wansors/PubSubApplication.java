@@ -52,7 +52,7 @@ public class PubSubApplication {
 	// Subscribe to PubSub
 	MessageReceiver receiver = (message, consumer) -> {
 	    this.process(message);
-	    consumer.ack();
+	   // consumer.ack();
 	};
 	this.subscriber = Subscriber.newBuilder(subscriptionNameObject, receiver).build();
 
